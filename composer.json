@@ -1,0 +1,20 @@
+{
+    "name": "sliverwing/alidayu",
+    "description": "Sliverwing Alidayu API",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sliverwing",
+            "email": "i@Sliverwing.me"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Sliverwing\\Alidayu\\": "src/"
+        }
+    },
+    "require": {
+        "flc/alidayu": "dev"
+    }
+}
