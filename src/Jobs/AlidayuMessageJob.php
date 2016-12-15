@@ -1,11 +1,12 @@
 <?php
 
-namespace Sliverwing\Alidayu;
+namespace Sliverwing\Alidayu\Jobs;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Support\Facades\Log;
 
 use Flc\Alidayu\Client;
 use Flc\Alidayu\App;
@@ -59,8 +60,9 @@ class AlidayuMessageJob implements ShouldQueue
             ->setSmsFreeSignName($this->freeSignName)
             ->setSmsTemplateCode($this->templateCode);
         $resp = $client->execute($req);
-        if ($resp->code != 0){
+        if (isset($resp->code)){
             throw new \Exception($resp->sub_msg);
         }
+        Log::info('SMS Send to ' . $this->phoneNum);
     }
 }
