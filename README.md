@@ -36,7 +36,8 @@ return [
         ],
     ],
 ];
-```
+```  
+
 * My template is `您的注册码为 ${code}`
 * I can send my verification code via 
 ```
