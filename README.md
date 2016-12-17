@@ -21,7 +21,8 @@ $this->dispatch(new AlidayuMessageJob($phoneNumber, $paramInYourTemplate, $confi
 
 * then you will see result in console
 ## example
-* I have my `config/alidayu.php` like this:
+* I have my `config/alidayu.php` like this:  
+
 ```
 <?php
 
@@ -39,7 +40,8 @@ return [
 ```  
 
 * My template is `您的注册码为 ${code}`
-* I can send my verification code via 
+* I can send my verification code via   
+
 ```
     $this->dispatch(new AlidayuMessageJob($phoneNumber, ['code'=>$code], "numsend"));
 ```
