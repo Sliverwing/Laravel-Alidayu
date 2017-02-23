@@ -1,8 +1,8 @@
 <?php
 
 return [
-    'appkey' => '',
-    'secretKey' => '',
+    'appkey' => env('ALIDAYU_APPKEY'),
+    'secretKey' => env('ALIDAYU_SECRET'),
 
     'sms' => [
         'numsend' => [
