@@ -8,6 +8,7 @@
 * edit `config/alidayu.php` put your appkey & secretKey
 * put your sms config in `sms` array
 * edit your `.env` file and make sure you have proper `QUEUE_DRIVER` configuration
+* add `ALIDAYU_APPKEY` and `ALIDAYU_SECRET` in your `.env` file
 * `php artisan queue:work`
 * edit your controller where you need to send sms
 
@@ -26,8 +27,8 @@ $this->dispatch(new AlidayuMessageJob($phoneNumber, $paramInYourTemplate, $confi
 <?php
 
 return [
-    'appkey' => '********',
-    'secretKey' => '************************',
+    'appkey' => env('ALIDAYU_APPKEY'),
+    'secretKey' => env('ALIDAYU_SECRET'),
 
     'sms' => [
         'numsend' => [
