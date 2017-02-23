@@ -4,7 +4,7 @@
 
 * `composer require sliverwing/alidayu`
 * add `Sliverwing\Alidayu\AlidayuServiceProvider::class,` to your `config/app.php` file
-* `php artisan vendor:publish`
+* `php artisan vendor:publish --provider="Sliverwing\Alidayu\AlidayuServiceProvider"`
 * edit `config/alidayu.php` put your appkey & secretKey
 * put your sms config in `sms` array
 * edit your `.env` file and make sure you have proper `QUEUE_DRIVER` configuration
